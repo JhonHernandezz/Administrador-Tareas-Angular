@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #0b0b11;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    background-color: white;
+    height: 100%;
+    scroll-behavior: auto;
+}

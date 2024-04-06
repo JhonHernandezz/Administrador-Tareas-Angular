@@ -1,0 +1,148 @@
+.component-info {
+    width: 100%;
+    height: auto;
+    z-index: 20;    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.component-info::after {
+    content: "";
+    aspect-ratio: 1;
+    position: absolute;
+    width: 110%;
+    height: 100%;
+    animation: rotate 13s ease-in-out infinite;
+    background-image: conic-gradient(
+        from 0deg at 0% 0%,
+        #073aff00 25%,
+        rgb(0, 102, 555) 1%,
+        #073aff00 100%
+    );
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.sub-content {
+    background-color: #0b0b11;
+    width: 99%;
+    height: 100%;
+    z-index: 20;    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 100%;
+}
+
+.title-info {
+    font-size: 40px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form-info {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-name-status {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 5px 0px;
+    margin-bottom: 20px;
+}
+
+.input-name-task,
+.select-status-task {
+    position: relative;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.input-name-task label,
+.select-status-task label {
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    z-index: 1;
+    background-color: #0b0b11;
+    padding: 0px 4px;
+}
+
+.input-name-task input,
+.select-status-task select {
+    width: 100%;
+    height: 100%;
+    padding: 0px 5px;
+    outline: none;
+    background-color: #0b0b11;
+    border: 1px solid white;
+    z-index: 0;
+}
+
+.content-description {
+    width: 270px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    margin-bottom: 20px;
+}
+
+.content-description label {
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    z-index: 1;
+    background-color: #0b0b11;
+    padding: 0px 4px;
+}
+
+.content-description textarea {
+    font-size: 15px;
+    width: 100%;
+    min-height: 100px;
+    max-height: 400px;
+    resize: none;
+    field-sizing: content;
+    padding: 10px 3px;
+    outline: none;
+    background-color: #0b0b11;
+    border: 1px solid white;
+    z-index: 0;
+}
+
+.button-info {
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    background-color: transparent;
+    outline: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid white;
+    border-radius: 5px;
+}

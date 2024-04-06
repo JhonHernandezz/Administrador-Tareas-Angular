@@ -1,0 +1,123 @@
+.component-view {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content-info-view {
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.content-title-status-view {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-task,
+.text-status-view {
+    margin: 0;
+    padding: 0;
+}
+
+.content-status-view {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-status-view {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin: 5px 9px 0px;
+    animation: blink 0.5s infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1; 
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.content-description-view {
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.content-fecha-view {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.button-update {
+    background-color: transparent;
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    width: 25px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-update img {
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    filter: opacity(0.6) drop-shadow(0 0 0 white);
+}
+
+/* ------------ Borde ------------- */
+.not-started {
+    border: 1px solid darkgray;
+}
+
+.in-process {
+    border: 1px solid blue;
+}
+
+.paused {
+    border: 1px solid red;
+}
+
+.done {
+    border: 1px solid green;
+}
+/* ------------------------------- */
+
+/* ------------ Background ------------- */
+.not-started-background {
+    background-color: darkgray;
+}
+
+.in-process-background {
+    background-color: blue;
+}
+
+.paused-background {
+    background-color: red;
+}
+
+.done-background {
+    background-color: green;
+}
+/* ------------------------------------ */
