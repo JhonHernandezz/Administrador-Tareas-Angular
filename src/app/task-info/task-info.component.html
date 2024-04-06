@@ -1,0 +1,26 @@
+<div class="component-info">
+    <div class="sub-content">
+        <h1 class="title-info">ADD TASK</h1>
+
+        <form class="form-info" (submit)="submitData($event)">
+            <div class="content-name-status">
+                <div class="input-name-task">
+                    <label for="">Name taks</label>
+                    <input type="text" #nameInput>
+                </div>
+                <div class="select-status-task">
+                    <label for="">Status</label>
+                    <select #statuSelect>
+                        <option value="Not started">Not started</option>
+                        <option value="In progress">In progress</option>
+                    </select>
+                </div>
+            </div>
+            <div class="content-description">
+                <label for="">Description</label>
+                <textarea #descriptionTextarea cols="30" rows="10"></textarea>
+            </div>
+            <button class="button-info">ADD</button>
+        </form>
+    </div>
+</div>
