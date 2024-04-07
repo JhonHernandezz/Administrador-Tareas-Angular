@@ -23,20 +23,16 @@ export class TaskInfoComponent {
       totalData = JSON.parse(existeData)
     }
 
-    const format = (date: any, locale: any, options: any) => 
-      new Intl.DateTimeFormat(locale, options).format(date)
-    
-
     let now = new Date()
 
-    format(now, 'es', { dateStyle: 'long' })
+    const formattedDate = now.toLocaleDateString('es', { year: 'numeric', month: 'long', day: 'numeric' });
 
     const data = {
       id: crypto.randomUUID(),
       name: this.nameInput.nativeElement.value,
       status: this.statuSelect.nativeElement.value,
       description: this.descriptionTextarea.nativeElement.value,
-      date: now
+      date: formattedDate
     }    
 
     totalData.push(data)
